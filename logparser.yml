@@ -1,4 +1,4 @@
-name: docker
+name: Pavlo_polyak_25021982
 env:
  PACK_NAME: "docker ${{ github.sha }}"
  APP_NAME: "Docker"
