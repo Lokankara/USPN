@@ -30,11 +30,7 @@ for lines in file:
             c+=1
             logs_entries=[]
 file.close()
-df = pd.DataFrame(logs_entries)
-#df["hostname"].mask(df["hostname"].duplicated(),inplace=True)
-#df["ip_address"].mask(df["ip_address"].duplicated(),inplace=True)
-df.sort_values(by=['ip_address'], inplace=True)
-df.to_excel("access_logs.xlsx")
+
 
 ssh_client =paramiko.SSHClient()
 ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
