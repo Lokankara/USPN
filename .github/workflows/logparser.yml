@@ -20,9 +20,6 @@ jobs:
     - name: git clone
       uses: actions/checkout@v1
 
-    - name: wokr dir
-      run: cd /USPN
-
     - name: print ls
       run: ls -lsa
       
