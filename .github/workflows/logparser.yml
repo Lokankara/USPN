@@ -16,11 +16,15 @@ jobs:
   my_ubuntu:
     runs-on: ubuntu-latest 
     steps:
-    - name: print ls
-      run: ls -lsa
       
     - name: git clone
       uses: actions/checkout@v1
+
+    - name: wokr dir
+      run: cd /USPN
+
+    - name: print ls
+      run: ls -lsa
       
   my_python:
     runs-on: ubuntu-latest

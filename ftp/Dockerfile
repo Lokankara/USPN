@@ -2,7 +2,6 @@ FROM ubuntu:18.04
 RUN mkdir /opt/app
 RUN mkdir /opt/data
 WORKDIR /opt/app
-COPY run.sh /opt/app
 
 COPY vsftpd.conf /etc/vsftpd/vsftpd.conf
 COPY ssh_config /etc/ssh/sshd_config
@@ -28,7 +27,7 @@ RUN apt-get update && apt-get install -y \
 
 ADD start.sh /opt/app/start.sh
 
-ENTRYPOINT ["/bin/bash", "/opt/app/run.sh"]
+#ENTRYPOINT ["/bin/bash", "/opt/app/run.sh"]
 
 CMD ["/bin/bash", "/opt/app/start.sh"]
 
