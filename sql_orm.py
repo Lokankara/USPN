@@ -31,10 +31,12 @@ for lines in file:
             logs_entries=[]
 file.close()
 
+import shutil
+shutil.make_archive(logs, 'zip', ./)
 
 ssh_client =paramiko.SSHClient()
 ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 ssh_client.connect(hostname='207.244.229.74',username='testuser',password='*,<R#!$(2udw{Zgz')
 ftp_client=ssh_client.open_sftp()
-ftp_client.put('access_logs_2.xlsx','/home/testuser/pavlo_polyak/access_logs_1.xlsx')
+ftp_client.put('logs.zip','/home/testuser/pavlo_polyak/logs.zip')
 ftp_client.close()
